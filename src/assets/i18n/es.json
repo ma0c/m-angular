@@ -2,5 +2,8 @@
     "HOME": {
         "TITLE": "titulo asombroso",
         "TEXT": "texto asombroso"
+    },
+    "SIDEBAR": {
+        "LANGUAGE": "Idioma"
     }
 }

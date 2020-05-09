@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+    <!-- Navbar content -->
+    <mat-toolbar-row>
+        <span>Logo</span>
+        <h2 class="example-spacer">{{'HOME.TITLE' | translate}}</h2>
+        {{ 'SIDEBAR.LANGUAGE' | translate }}: 
+              <mat-form-field appearance="standard" class="lang-selector">
+                <mat-select [value]="translate.currentLang" (selectionChange)="handleLanguageSelection($event)">
+                  <mat-select-trigger>
+                    <div style="text-align: center;">
+                      <img [src]="_flagIcons + '/' + translate.currentLang + '.png'" [alt]="'Language' + translate.currentLang"
+                        style="vertical-align: middle;">
+                    </div>
+                  </mat-select-trigger>
+                  <mat-option *ngFor="let lang of translate.getLangs()" [value]="lang">
+                    <div style="text-align: center;">
+                      <img class="app-login__lang-img"
+                        [src]="_flagIcons + '/' + lang + '.png'" [alt]="'Language' + lang"
+                        style="vertical-align: middle;">
+                    </div>
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+      </mat-toolbar-row>
+    
+    
+</mat-toolbar>
