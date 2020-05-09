@@ -2,5 +2,8 @@
     "HOME": {
         "TITLE": "awesome title",
         "TEXT": "awesome text"
+    },
+    "SIDEBAR": {
+        "LANGUAGE": "Language"
     }
 }

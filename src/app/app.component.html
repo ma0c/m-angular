@@ -1,8 +1,10 @@
-
-<h2>{{'HOME.TITLE' | translate}}</h2>
+<app-header></app-header>
 <div>
   <label for="">{{'HOME.TEXT' | translate}}</label>
-  <select #langselect (change)="translate.use(langselect.value)">
-    <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{lang}}</option>
-  </select>
 </div>
+
+<mat-list role="list">
+  <mat-list-item role="listitem">Item 1</mat-list-item>
+  <mat-list-item role="listitem">Item 2</mat-list-item>
+  <mat-list-item role="listitem">Item 3</mat-list-item>
+</mat-list>
