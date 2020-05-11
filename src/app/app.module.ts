@@ -1,3 +1,5 @@
+// Third party Modules
+import { NgxIndexedDBModule, DBConfig } from 'ngx-indexed-db';
 // Angular Material Modules
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -25,6 +27,20 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
+const dbConfig: DBConfig  = {
+  name: 'innerStorage',
+  version: 1,
+  objectStoresMeta: [{
+    store: 'items',
+    storeConfig: { keyPath: 'id', autoIncrement: true },
+    storeSchema: [
+      { name: 'name', keypath: 'name', options: { unique: false } },
+      { name: 'description', keypath: 'description', options: { unique: false } },
+      { name: 'status', keypath: 'status', options: { unique: false } }
+    ]
+  }]
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +57,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
+    NgxIndexedDBModule.forRoot(dbConfig),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,
     MatToolbarModule,
