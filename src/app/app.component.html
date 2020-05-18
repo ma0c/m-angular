@@ -3,9 +3,22 @@
   <label for="">{{'HOME.TEXT' | translate}}</label>
 </div>
 
-<mat-list role="list">
-  <mat-list-item role="listitem">Item 1</mat-list-item>
-  <mat-list-item role="listitem">Item 2</mat-list-item>
-  <mat-list-item role="listitem">Item 3</mat-list-item>
-</mat-list>
+<app-form-item (saveData)="addItem($event)"></app-form-item>
 
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let item of items">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{item.id}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{item.name}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    {{item.description}}
+    <button mat-raised-button class="item-done-button" color="primary" (click)="markAsDone($event, item)">{{'GENERAL.DONE' | translate}}</button>
+  </mat-expansion-panel>
+</mat-accordion>
+<!-- <button mat-fab class="fab-button" (click)="addItem($event)" color="primary">
+  <mat-icon>add</mat-icon>
+</button> -->
