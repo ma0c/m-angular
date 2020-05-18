@@ -3,7 +3,7 @@
     <mat-toolbar-row>
         <span>Logo</span>
         <h2 class="example-spacer">{{'HOME.TITLE' | translate}}</h2>
-        {{ 'SIDEBAR.LANGUAGE' | translate }}: 
+        {{ 'SIDEBAR.LANGUAGE' | translate }}:
               <mat-form-field appearance="standard" class="lang-selector">
                 <mat-select [value]="translate.currentLang" (selectionChange)="handleLanguageSelection($event)">
                   <mat-select-trigger>
@@ -22,6 +22,4 @@
                 </mat-select>
               </mat-form-field>
       </mat-toolbar-row>
-    
-    
 </mat-toolbar>

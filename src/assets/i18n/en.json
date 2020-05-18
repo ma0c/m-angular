@@ -3,7 +3,23 @@
         "TITLE": "awesome title",
         "TEXT": "awesome text"
     },
+    "GENERAL": {
+      "NAME": "Name",
+      "DESCRIPTION": "Description",
+      "ADD": "Add",
+      "DONE": "Done",
+      "CANCEL": "Cancel",
+      "OK": "Ok"
+    },
+    "ITEM_MODULE": {
+      "CREATE_TITLE": "Create a new Item",
+      "CREATE_DESCRIPTION": "Create form item"
+    },
     "SIDEBAR": {
         "LANGUAGE": "Language"
+    },
+    "ERROR": {
+      "ADD_ITEM": "There was a error adding the item",
+      "UPDATE_ITEM": "There was a error updating the item"
     }
 }

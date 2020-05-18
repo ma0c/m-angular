@@ -3,7 +3,23 @@
         "TITLE": "titulo asombroso",
         "TEXT": "texto asombroso"
     },
+    "GENERAL": {
+      "NAME": "Nombre",
+      "DESCRIPTION": "Descripcion",
+      "ADD": "Agregar",
+      "DONE": "Hecho",
+      "CANCEL": "Cancelar",
+      "OK": "Ok"
+    },
+    "ITEM_MODULE": {
+      "CREATE_TITLE": "Crear",
+      "CREATE_DESCRIPTION": "Formulario de creacion"
+    },
     "SIDEBAR": {
         "LANGUAGE": "Idioma"
+    },
+    "ERROR": {
+      "ADD_ITEM": "hubo un error agregando un elemento",
+      "UPDATE_ITEM": "hubo un error actualiando un elemento"
     }
 }

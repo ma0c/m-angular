@@ -1,0 +1,25 @@
+<mat-expansion-panel [expanded]="toggle">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{'ITEM_MODULE.CREATE_TITLE' | translate}}
+    </mat-panel-title>
+    <mat-panel-description>
+      {{'ITEM_MODULE.CREATE_DESCRIPTION' | translate}}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <mat-form-field >
+    <mat-label>{{'GENERAL.NAME' | translate}}</mat-label>
+    <input matInput type="text" [(ngModel)]="name">
+  </mat-form-field>
+<br>
+  <mat-form-field class="create-item-description">
+    <mat-label>{{'GENERAL.DESCRIPTION' | translate}}</mat-label>
+    <textarea  matInput [(ngModel)]="description"></textarea>
+  </mat-form-field>
+  <div class="buttons-container">
+    <!-- since no controller to close the mar-expansion-panel
+       <button mat-button (click)="close($event)">{{'GENERAL.CANCEL' | translate}}</button> -->
+    <button mat-raised-button color="primary" (click)="save($event)">{{'GENERAL.ADD' | translate}}</button>
+  </div>
+</mat-expansion-panel>
